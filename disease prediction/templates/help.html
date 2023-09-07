@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Help</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<style>
+
+body {
+  background-color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.timeline-section {
+  background-image: url('../images/colleagues-working-cozy-office-medium-shot.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.timeline-container .vertical-scrollable-timeline {
+  list-style-type: none;
+  position: relative;
+  padding-left: 0;
+}
+
+.timeline-container .vertical-scrollable-timeline .list-progress {
+  width: 8px;
+  height: 87%;
+  background-color: teal;
+  position: absolute;
+  left: 52px;
+  top: 0;
+  overflow: hidden;
+}
+
+.timeline-container .vertical-scrollable-timeline .list-progress .inner {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: rgb(4, 164, 154);
+  width: 100%;
+}
+
+.timeline-container .vertical-scrollable-timeline li {
+  position: relative;
+  padding: 20px 0px 65px 145px;
+}
+
+.timeline-container .vertical-scrollable-timeline li:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-container .vertical-scrollable-timeline li p {
+  line-height: 40px;
+}
+
+.timeline-container .vertical-scrollable-timeline li p:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-container .vertical-scrollable-timeline li .icon-holder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 104px;
+  height: 104px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(4, 164, 154);
+  border-radius: 50%;
+  z-index: 1;
+  transition: 0.4s all;
+}
+
+.timeline-container .vertical-scrollable-timeline li .icon-holder::before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  border: 4px solid #fff;
+  position: absolute;
+  background-color: rgb(4, 164, 154);
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.4s all;
+}
+
+.timeline-container .vertical-scrollable-timeline li .icon-holder {
+  font-size: 25px;
+  color: white
+}
+
+.timeline-container .vertical-scrollable-timeline li::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 8px;
+  background-color: transparent;
+  left: 52px;
+  z-index: 0;
+}
+
+.timeline-container .vertical-scrollable-timeline li.active .icon-holder {
+  background-color: teal;
+}
+
+.timeline-container .vertical-scrollable-timeline li.active .icon-holder::before {
+  background-color: teal;
+}
+
+.btn{
+    color:teal;
+    background-color: white;
+    border:2px solid teal;
+    border-radius:20px;
+    font-weight: bold;
+}
+
+.btn:hover{
+    color:white;
+    background-color: transparent;
+    border:2px solid white;
+}
+
+</style>
+</head>
+<body background="../static/images/bg1.jpg">
+
+    <section class="timeline-section section-padding" id="section_3">
+        <div class="section-overlay"></div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 text-center">
+                    <h1 class="text-white mb-4" style="font-weight:bold;">How does it work?</h1>
+                </div>
+
+                <div class="col-lg-10 col-12 mx-auto">
+                    <div class="timeline-container">
+                        <ul class="vertical-scrollable-timeline" id="vertical-scrollable-timeline">
+                            <div class="list-progress">
+                                <div class="inner"></div>
+                            </div>
+
+                            <li>
+                                <h4 class="text-white mb-3">Get Started</h4>
+
+                                <p class="text-white"> => Access HealthPredict+ through the provided web interface.<br>
+                                    => Ensure you have a stable internet connection to use the system effectively</p>
+
+                                <div class="icon-holder">
+                                  <b>1</b>
+                                </div>
+                            </li>
+
+                            <li>
+                                <h4 class="text-white mb-3">Register yourself</h4>
+
+                                <p class="text-white">=> If you're a new user, click on the "register here" link to register yourself.
+                                    <br>
+                                    => Fill all the details and click on submit.
+                                </p>
+
+                                <div class="icon-holder">
+                                    2
+                                </div>
+                            </li>
+
+                            <li>
+                                <h4 class="text-white mb-3">Login</h4>
+
+                                <p class="text-white">=> If you're a registered user, login using your username and password to get access to the app.</p>
+
+                                <div class="icon-holder">
+                                  3
+                                </div>
+                            </li>
+
+                            <li>
+                                <h4 class="text-white mb-3">Entering Symptoms</h4>
+
+                                <p class="text-white"> => On the main screen, you will find a symptom entry form.<br>
+                                    => Input your symptoms in the provided text fields (choose from the dropdown menu). </p>
+
+                                <div class="icon-holder">
+                                  4
+                                </div>
+                            </li>
+
+                            <li>
+                                <h4 class="text-white mb-3">Submitting Symptoms</h4>
+
+                                <p class="text-white"> => After entering your symptoms, click the "Predict" button. <br>
+                                    => The system will process your input and generate potential disease predictions based on machine learning algorithms.</p>
+
+                                <div class="icon-holder">
+                                  5
+                                </div>
+                            </li>
+
+                            <li>
+                                <h4 class="text-white mb-3">Viewing Results</h4>
+
+                                <p class="text-white"> => Once the prediction is complete, the results will be displayed on the screen.</p>
+
+                                <div class="icon-holder">
+                                  5
+                                </div>
+                            </li>
+
+                            <li>
+                                <h4 class="text-white mb-3">Feedback and Improvements</h4>
+
+                                <p class="text-white">=> We value your feedback to enhance the accuracy and usability of HealthPredict+. <br>
+                                => If you have any suggestions, encounter any issues, or find discrepancies in the results, please reach out to us via the provided contact information.</p>
+
+                                <div class="icon-holder">
+                                  6
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <br>
+
+                <span style = "color:white; font-weight: bold; border: 1px solid teal; border-radius:20px; padding-top:10px; padding-bottom:10px;">Remember, HealthPredict+ is intended to be a helpful tool, but it is not a substitute for professional medical advice. Always consult with a qualified healthcare provider for a proper diagnosis and treatment plan.
+
+<br><br>We hope you find HealthPredict+ useful in gaining insights into potential diseases based on your symptoms. If you have any further questions or need assistance, please refer to the provided support resources.
+
+<br><br>Thank you for using HealthPredict+!</span>
+
+                <div class="col-12 text-center mt-5">
+                    <p class="text-white">
+                        Want to try?
+                        <a href="/" class="btn custom-btn custom-border-btn ms-3">go to HealthPredict+</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

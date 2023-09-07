@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>HealthPredict+</title>
+</head>
+<body>
+    <div class="project">
+        <div class="logo">
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/healthcare-6949101-5695092.png" alt="">
+        </div>
+    <center><h2>HealthPredict+</h2></center>
+    <form name="form" action="/a" method="POST" enctype="multipart/form-data">
+            <br>
+            <!-- <label for="symp1">Choose a Symptom:</label> -->
+            Symptom1: <select id="symp1" name="symp1" required>
+                <option disabled selected value> -- select an option -- </option>
+            {%for i in range(0,len)%}
+                <option >{{symptoms[i]}}</option>
+            {%endfor%}
+            </select>
+            <br>
+            <br>
+            <!-- <label for="symp2">Choose a Symptom:</label> -->
+            Symptom2: <select id="symp2" name="symp2">
+                <option disabled selected value> -- select an option -- </option>
+
+            {%for i in range(0,len)%}
+                <option >{{symptoms[i]}}</option>
+            {%endfor%}
+            </select>
+            <br>
+            <br>
+
+            <!-- <label for="symp3">Choose a Symptom:</label> -->
+            Symptom3: <select id="symp3" name="symp3">
+                <option disabled selected value> -- select an option -- </option>
+            {%for i in range(0,len)%}
+                <option >{{symptoms[i]}}</option>
+            {%endfor%}
+            </select>
+            <br>
+            <br>
+
+            <!-- <label for="symp4">Choose a Symptom:</label> -->
+            Symptom4: <select id="symp4" name="symp4">
+                <option disabled selected value> -- select an option -- </option>
+            {%for i in range(0,len)%}
+                <option >{{symptoms[i]}}</option>
+            {%endfor%}
+            </select>
+            <br>
+            <br>
+            Symptom5: <select id="symp5" name="symp5">
+                <option disabled selected value> -- select an option -- </option>
+            {%for i in range(0,len)%}
+                <option >{{symptoms[i]}}</option>
+            {%endfor%}
+            </select>
+            <br>
+            <br>
+            <button id="btn" type="submit">Predict</button>
+            <h3 id="ans" style="display: none;">{{ans}}</h3>
+    </form>
+    <script>
+        document.getElementsByTagName("form")[0].addEventListener("submit", function (e){
+        e.preventDefault();
+        var fd = new FormData(this);
+        var xhr = new XMLHttpRequest();
+        xhr.open("post", "/upload",true);
+        xhr.onreadystatechange = function (e){
+            var ans = JSON.parse(e.target.response)["ans"];
+            document.getElementById("ans").innerText = "Potential disease: "+ans;
+        }
+        xhr.send(fd);
+})
+    </script>
+</div>
+<script src="../static/js/index.js"></script>
+</body>
+</html>
